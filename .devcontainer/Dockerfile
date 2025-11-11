@@ -4,6 +4,16 @@ FROM debian:buster
 # Prevent interactive prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Update apt sources to use archive.debian.org (Buster is EOL)
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+    sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list
+
+# Add PostgreSQL APT archive repository for older versions (9.6)
+RUN apt-get update && apt-get install -y wget gnupg && \
+    echo "deb http://apt-archive.postgresql.org/pub/repos/apt buster-pgdg main 9.6" > /etc/apt/sources.list.d/pgdg.list && \
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
 # Install essential build tools and dependencies
 RUN apt-get update && apt-get install -y \
     # Build essentials
@@ -15,7 +25,7 @@ RUN apt-get update && apt-get install -y \
     automake \
     libtool \
     pkg-config \
-    # PostgreSQL 9.6 server and development files
+    # PostgreSQL 9.6 server and development files (from pgdg repository)
     postgresql-9.6 \
     postgresql-server-dev-9.6 \
     postgresql-client-9.6 \

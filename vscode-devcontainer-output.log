@@ -1,0 +1,5 @@
+705351bd44f628b005e8795b12cd98efacacd
+[3095 ms] Start: Run: docker events --format {{json .}} --filter event=start
+[3099 ms] Start: Starting container
+[3099 ms] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/projects/mine/PL-php/.worktrees/devcontainer,target=/workspaces/devcontainer --mount source=plphp-php-build-cache,target=/opt/php-build,type=volume --mount source=plphp-postgres-data,target=/var/lib/postgresql/data,type=volume --mount type=volume,src=vscode,dst=/vscode -l devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer -l devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json -e POSTGRES_VERSION=9.6 -e PHP_VERSION=5.6.40 --entrypoint /bin/sh vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd -c echo Container started
+Container started

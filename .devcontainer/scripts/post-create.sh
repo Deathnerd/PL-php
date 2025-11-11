@@ -1,15 +1,21 @@
 #!/bin/bash
 set -e
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
 echo "=================================================="
 echo "PL/php Development Container Initialization"
 echo "=================================================="
+echo ""
+echo "Workspace: $WORKSPACE_ROOT"
 echo ""
 
 # Step 1: Build/verify PHP installation
 echo "Step 1: PHP Setup"
 echo "----------------"
-bash /workspace/.devcontainer/scripts/setup-php.sh
+bash "$SCRIPT_DIR/setup-php.sh"
 echo ""
 
 # Step 2: Initialize PostgreSQL
@@ -78,7 +84,7 @@ echo ""
 echo "Step 5: Workspace Setup"
 echo "----------------"
 
-cd /workspace
+cd "$WORKSPACE_ROOT"
 
 if [ -f configure.in ] && [ ! -f configure ]; then
     echo "Generating configure script..."
