@@ -1,0 +1,29 @@
+# Git worktrees
+.worktrees/
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.la
+*.lo
+.libs/
+.deps/
+
+# Autoconf/automake
+autom4te.cache/
+config.log
+config.status
+configure
+Makefile
+*.in~
+
+# Test output
+regression.diffs
+regression.out
+results/
+
+# Editor files
+*~
+.*.swp
+.DS_Store
