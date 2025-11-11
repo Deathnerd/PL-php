@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ckolkman.vscode-postgres",
+        "eamodio.gitlens",
+        "ms-vscode.makefile-tools"
+    ]
+}

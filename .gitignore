@@ -27,3 +27,8 @@ results/
 *~
 .*.swp
 .DS_Store
+
+# Devcontainer
+.devcontainer/.env
+.vscode/.ropeproject
+.vscode/.history

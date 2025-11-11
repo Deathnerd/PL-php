@@ -1,0 +1,152 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build PL/php",
+            "type": "shell",
+            "command": "make clean && make",
+            "problemMatcher": {
+                "owner": "gcc",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Install PL/php",
+            "type": "shell",
+            "command": "make install",
+            "dependsOn": ["Build PL/php"],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Build and Install",
+            "type": "shell",
+            "command": "make clean && make && make install",
+            "problemMatcher": {
+                "owner": "gcc",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Run All Tests",
+            "type": "shell",
+            "command": "make installcheck",
+            "dependsOn": ["Install PL/php"],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Run Single Test",
+            "type": "shell",
+            "command": "make installcheck REGRESS=${input:testName}",
+            "dependsOn": ["Install PL/php"],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "View Test Diffs",
+            "type": "shell",
+            "command": "cat regression.diffs",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Configure Project",
+            "type": "shell",
+            "command": "./configure --with-php=/opt/php-build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Run Diagnostics",
+            "type": "shell",
+            "command": "bash .devcontainer/scripts/diagnose.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Start PostgreSQL",
+            "type": "shell",
+            "command": "su postgres -c 'pg_ctl -D /var/lib/postgresql/data start'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Stop PostgreSQL",
+            "type": "shell",
+            "command": "su postgres -c 'pg_ctl -D /var/lib/postgresql/data stop'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Restart PostgreSQL",
+            "type": "shell",
+            "command": "su postgres -c 'pg_ctl -D /var/lib/postgresql/data restart'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "testName",
+            "type": "promptString",
+            "description": "Enter test name (e.g., base, trigger, spi)",
+            "default": "base"
+        }
+    ]
+}
