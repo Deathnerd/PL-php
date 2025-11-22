@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+set -eou pipefail
+set -x
 
 # Setup PHP with embed SAPI for PL/php development
 # This script checks if PHP is already built in the cache volume,
@@ -46,15 +47,27 @@ echo "This will take approximately 15-20 minutes."
 echo "Log file: $PHP_BUILD_LOG"
 echo ""
 
-# Create temporary build directory
-BUILD_DIR=$(mktemp -d)
+# Build in the cache volume so partial builds are cached
+BUILD_DIR="$PHP_PREFIX/build-${PHP_VERSION}"
+mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
-echo "[1/5] Downloading PHP $PHP_VERSION source..."
-wget -q --show-progress "https://www.php.net/distributions/php-${PHP_VERSION}.tar.gz"
+# Download source if not already present
+if [ ! -f "php-${PHP_VERSION}.tar.gz" ]; then
+    echo "[1/5] Downloading PHP $PHP_VERSION source..."
+    wget -q --show-progress "https://www.php.net/distributions/php-${PHP_VERSION}.tar.gz"
+else
+    echo "[1/5] Using cached PHP $PHP_VERSION source..."
+fi
 
-echo "[2/5] Extracting source archive..."
-tar xzf "php-${PHP_VERSION}.tar.gz"
+# Extract if not already extracted
+if [ ! -d "php-${PHP_VERSION}" ]; then
+    echo "[2/5] Extracting source archive..."
+    tar xzf "php-${PHP_VERSION}.tar.gz"
+else
+    echo "[2/5] Using extracted PHP $PHP_VERSION source..."
+fi
+
 cd "php-${PHP_VERSION}"
 
 echo "[3/5] Configuring PHP build..."
@@ -63,13 +76,19 @@ echo "  - Thread Safety (ZTS): disabled"
 echo "  - CLI/CGI: disabled"
 echo ""
 
+# Fix Debian multiarch paths for PHP's build system
+# PHP 5.6 expects headers in /usr/include/curl but Debian uses /usr/include/x86_64-linux-gnu/curl
+if [ -d /usr/include/x86_64-linux-gnu/curl ] && [ ! -e /usr/include/curl ]; then
+    echo "  - Creating symlink for curl headers (Debian multiarch compatibility)"
+    ln -s /usr/include/x86_64-linux-gnu/curl /usr/include/curl
+fi
+
 ./configure \
     --prefix="$PHP_PREFIX" \
     --enable-embed \
     --disable-cli \
     --disable-cgi \
     --with-config-file-path="$PHP_PREFIX/etc" \
-    --with-openssl \
     --with-zlib \
     --with-curl \
     --with-readline \

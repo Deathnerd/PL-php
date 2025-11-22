@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+set -euo pipefail
+set -x
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

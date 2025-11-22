@@ -76,4 +76,4 @@ RUN echo 'alias pgstart="su postgres -c \"pg_ctl -D /var/lib/postgresql/data sta
     echo 'alias pgrestart="su postgres -c \"pg_ctl -D /var/lib/postgresql/data restart\""' >> /root/.bashrc
 
 # Set working directory
-WORKDIR /workspace
+WORKDIR /workspaces
