@@ -55,5 +55,8 @@
 	"forwardPorts": [5432],
 
 	// Use root user for setup (PostgreSQL installation requires it)
-	"remoteUser": "root"
+	"remoteUser": "root",
+
+	// Don't override the container's default command
+	"overrideCommand": false
 }

@@ -77,3 +77,6 @@ RUN echo 'alias pgstart="su postgres -c \"pg_ctl -D /var/lib/postgresql/data sta
 
 # Set working directory
 WORKDIR /workspaces
+
+# Keep container running
+CMD ["sleep", "infinity"]
