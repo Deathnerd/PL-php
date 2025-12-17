@@ -1,0 +1,394 @@
+[55 ms] Dev Containers 0.427.0 in VS Code 1.105.1 (7d842fb85a0275a4a8e4d7e040d2625abbf7f084).
+[54 ms] Start: Resolving Remote
+[80 ms] Setting up container for folder or workspace: /projects/mine/PL-php/.worktrees/devcontainer
+[80 ms] Context: desktop-linux
+[135 ms] Start: Check Docker is running
+[136 ms] Start: Run: docker version
+[168 ms] Client: Docker Engine - Community
+ Version:           29.0.0
+ API version:       1.51 (downgraded from 1.52)
+ Go version:        go1.25.4
+ Git commit:        3d4129b
+ Built:             Mon Nov 10 21:46:03 2025
+ OS/Arch:           linux/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.47.0 (206054)
+ Engine:
+  Version:          28.4.0
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.7
+  Git commit:       249d679
+  Built:            Wed Sep  3 20:57:37 2025
+  OS/Arch:          linux/amd64
+  Experimental:     true
+ containerd:
+  Version:          1.7.27
+  GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+ runc:
+  Version:          1.2.5
+  GitCommit:        v1.2.5-0-g59923ef
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+[176 ms] Start: Run: docker volume ls -q
+[230 ms] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=vsch.quality=stable
+[273 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json
+[296 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer
+[325 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer
+[355 ms] Running Dev Containers CLI:   up --user-data-folder /home/deathnerd/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-14391a4f-a3b6-402f-83c5-6799b5f42e931762894926389 --workspace-folder /projects/mine/PL-php/.worktrees/devcontainer --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --id-label devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --log-level debug --log-format json --config /projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --mount type=bind,source=/run/user/1000/wayland-0,target=/tmp/vscode-wayland-405bf7a4-df9f-4448-9146-a0004f67f618.sock --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+[356 ms] Start: Run: /snap/code/211/usr/share/code/code /home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/deathnerd/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-14391a4f-a3b6-402f-83c5-6799b5f42e931762894926389 --workspace-folder /projects/mine/PL-php/.worktrees/devcontainer --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --id-label devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --log-level debug --log-format json --config /projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --mount type=bind,source=/run/user/1000/wayland-0,target=/tmp/vscode-wayland-405bf7a4-df9f-4448-9146-a0004f67f618.sock --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+[571 ms] @devcontainers/cli 0.80.1. Node.js v22.19.0. linux 5.15.0-161-generic x64.
+[571 ms] Start: Run: docker buildx version
+[629 ms] github.com/docker/buildx v0.28.0-desktop.1 8ad457cf5e291fcb7152ef6946162cc811a2fb29
+[629 ms] 
+[629 ms] Start: Run: docker -v
+[644 ms] Start: Resolving Remote
+[647 ms] Start: Run: git rev-parse --show-cdup
+[655 ms] Loading 150 extra certificates from /etc/ssl/certs/ca-certificates.crt.
+[997 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json
+[1023 ms] Start: Run: docker inspect --type image debian:buster
+[1061 ms] Start: Run: docker buildx build --load --build-arg BUILDKIT_INLINE_CACHE=1 -f /tmp/devcontainercli-deathnerd/container-features/0.80.1-1762894928823/Dockerfile-with-features -t vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd --target dev_containers_target_stage --build-arg _DEV_CONTAINERS_BASE_IMAGE=dev_container_auto_added_stage_label /projects/mine/PL-php/.worktrees/devcontainer
+[+] Building 0.7s (12/13)                                  docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features         0.1s
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+[+] Building 0.8s (12/13)                                  docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features         0.1s
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+[+] Building 0.9s (12/13)                                  docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features         0.1s
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+[+] Building 1.1s (12/13)                                  docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features         0.1s
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+[+] Building 1.1s (12/13)                                  docker:desktop-linux
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+[+] Building 1.2s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 1.4s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 1.5s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 1.7s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 1.8s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.0s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.1s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.3s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.4s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.6s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.7s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 2.9s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.0s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.2s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.3s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.5s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.6s (13/13)                                  docker:desktop-linux
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+[+] Building 3.7s (13/13) FINISHED                         docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features         0.1s
+ => => transferring dockerfile: 4.19kB                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:buster           0.2s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/deb  0.1s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a200  0.1s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.d  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update   0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   a  0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/l  0.0s
+ => CACHED [dev_container_auto_added_stage_label 7/9] RUN mkdir -p /opt/p  0.0s
+ => CACHED [dev_container_auto_added_stage_label 8/9] RUN echo 'alias pgs  0.0s
+ => CACHED [dev_container_auto_added_stage_label 9/9] WORKDIR /workspace   0.0s
+ => exporting to image                                                     0.8s
+ => => exporting layers                                                    0.0s
+ => => preparing layers for inline cache                                   0.0s
+ => => exporting manifest sha256:f4e407d6344656783264ae611a3f6f8a62375fb5  0.0s
+ => => exporting config sha256:1291c9d472dbbde525c40abf2f2f174d47284bf406  0.0s
+ => => exporting attestation manifest sha256:b0be5781caf4223075d860f9de3e  0.2s
+ => => exporting manifest list sha256:cf81156293c8bfe11e9c63ce1059da2b0b2  0.2s
+ => => naming to docker.io/library/vsc-devcontainer-bce6c318cd5f4f4fa4904  0.0s
+ => => unpacking to docker.io/library/vsc-devcontainer-bce6c318cd5f4f4fa4  0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ndb84hlcx46al976h0ot3wzcj
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview 
+[5169 ms] Start: Run: docker inspect --type image vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd
+[5233 ms] Start: Run: docker events --format {{json .}} --filter event=start
+[5237 ms] Start: Starting container
+[5237 ms] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/projects/mine/PL-php/.worktrees/devcontainer,target=/workspaces/devcontainer --mount source=plphp-php-build-cache,target=/opt/php-build,type=volume --mount source=plphp-postgres-data,target=/var/lib/postgresql/data,type=volume --mount type=volume,src=vscode,dst=/vscode --mount type=bind,src=/run/user/1000/wayland-0,dst=/tmp/vscode-wayland-405bf7a4-df9f-4448-9146-a0004f67f618.sock -l devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer -l devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json -e POSTGRES_VERSION=9.6 -e PHP_VERSION=5.6.40 --entrypoint /bin/sh vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd -c echo Container started
+docker: Error response from daemon: invalid mount config for type "bind": bind source path does not exist: /run/user/1000/wayland-0
+
+Run 'docker run --help' for more information
+[5279 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json
+[5317 ms] Error: Command failed: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/projects/mine/PL-php/.worktrees/devcontainer,target=/workspaces/devcontainer --mount source=plphp-php-build-cache,target=/opt/php-build,type=volume --mount source=plphp-postgres-data,target=/var/lib/postgresql/data,type=volume --mount type=volume,src=vscode,dst=/vscode --mount type=bind,src=/run/user/1000/wayland-0,dst=/tmp/vscode-wayland-405bf7a4-df9f-4448-9146-a0004f67f618.sock -l devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer -l devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json -e POSTGRES_VERSION=9.6 -e PHP_VERSION=5.6.40 --entrypoint /bin/sh vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd -c echo Container started
+[5317 ms] trap "exit 0" 15
+[5317 ms] exec "$@"
+[5317 ms] while sleep 1 & wait $!; do :; done -
+[5317 ms]     at w6 (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:467:1253)
+[5318 ms]     at ax (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:467:997)
+[5318 ms]     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[5318 ms]     at async Y6 (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:484:3842)
+[5318 ms]     at async BC (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:484:4957)
+[5318 ms]     at async p7 (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:665:202)
+[5318 ms]     at async d7 (/home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:664:14804)
+[5318 ms]     at async /home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js:484:1188
+[5322 ms] Exit code 1
+[5323 ms] Start: Run: docker volume ls -q
+[5356 ms] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=vsch.quality=stable
+[5402 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json
+[5426 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer
+[5459 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer
+[5480 ms] Running Dev Containers CLI:   up --user-data-folder /home/deathnerd/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-14391a4f-a3b6-402f-83c5-6799b5f42e931762894926389 --workspace-folder /projects/mine/PL-php/.worktrees/devcontainer --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --id-label devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --log-level debug --log-format json --config /projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --terminal-columns 94 --terminal-rows 13 --include-configuration --include-merged-configuration
+[5480 ms] Start: Run: /snap/code/211/usr/share/code/code /home/deathnerd/.vscode/extensions/ms-vscode-remote.remote-containers-0.427.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/deathnerd/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-14391a4f-a3b6-402f-83c5-6799b5f42e931762894926389 --workspace-folder /projects/mine/PL-php/.worktrees/devcontainer --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --id-label devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --log-level debug --log-format json --config /projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --terminal-columns 94 --terminal-rows 13 --include-configuration --include-merged-configuration
+[5684 ms] @devcontainers/cli 0.80.1. Node.js v22.19.0. linux 5.15.0-161-generic x64.
+[5684 ms] Start: Run: docker buildx version
+[5767 ms] github.com/docker/buildx v0.28.0-desktop.1 8ad457cf5e291fcb7152ef6946162cc811a2fb29
+[5768 ms] 
+[5768 ms] Start: Run: docker -v
+[5797 ms] Start: Resolving Remote
+[5800 ms] Start: Run: git rev-parse --show-cdup
+[5808 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer --filter label=devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json
+[5841 ms] Start: Run: docker inspect --type image debian:buster
+[5894 ms] Start: Run: docker buildx build --load --build-arg BUILDKIT_INLINE_CACHE=1 -f /tmp/devcontainercli-deathnerd/container-features/0.80.1-1762894933656/Dockerfile-with-features -t vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd --target dev_containers_target_stage --build-arg _DEV_CONTAINERS_BASE_IMAGE=dev_container_auto_added_stage_label /projects/mine/PL-php/.worktrees/devcontainer
+[+] Building 3.6s (13/13) FINISHED                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile-with-features                       0.2s
+ => => transferring dockerfile: 4.19kB                                                   0.0s
+ => [internal] load metadata for docker.io/library/debian:buster                         0.4s
+ => [internal] load .dockerignore                                                        0.2s
+ => => transferring context: 2B                                                          0.0s
+ => [dev_container_auto_added_stage_label 1/9] FROM docker.io/library/debian:buster@sha  0.4s
+ => => resolve docker.io/library/debian:buster@sha256:58ce6f1271ae1c8a2006ff7d3e54e9874  0.4s
+ => CACHED [dev_container_auto_added_stage_label 2/9] RUN sed -i 's/deb.debian.org/arch  0.0s
+ => CACHED [dev_container_auto_added_stage_label 3/9] RUN apt-get update && apt-get ins  0.0s
+ => CACHED [dev_container_auto_added_stage_label 4/9] RUN apt-get update && apt-get ins  0.0s
+ => CACHED [dev_container_auto_added_stage_label 5/9] RUN echo "local   all              0.0s
+ => CACHED [dev_container_auto_added_stage_label 6/9] RUN mkdir -p /var/lib/postgresql/  0.0s
+ => CACHED [dev_container_auto_added_stage_label 7/9] RUN mkdir -p /opt/php-build && ch  0.0s
+ => CACHED [dev_container_auto_added_stage_label 8/9] RUN echo 'alias pgstart="su postg  0.0s
+ => CACHED [dev_container_auto_added_stage_label 9/9] WORKDIR /workspace                 0.0s
+ => exporting to image                                                                   1.3s
+ => => exporting layers                                                                  0.0s
+ => => preparing layers for inline cache                                                 0.1s
+ => => exporting manifest sha256:f4e407d6344656783264ae611a3f6f8a62375fb5370ce44391ec74  0.1s
+ => => exporting config sha256:1291c9d472dbbde525c40abf2f2f174d47284bf40658bb30c8eea4de  0.2s
+ => => exporting attestation manifest sha256:d04237ea603750da00782fef7187298b8b16417664  0.5s
+ => => exporting manifest list sha256:7d0d002f7a6e3645907c3f5b0f16d26d4d55b7fb2e418cc3d  0.2s
+ => => naming to docker.io/library/vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd  0.0s
+ => => unpacking to docker.io/library/vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a370535  0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/gkjte4g8cu5l1me5l8940hu5a
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview 
+[10021 ms] Start: Run: docker inspect --type image vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd
+[10066 ms] Start: Run: docker events --format {{json .}} --filter event=start
+[10070 ms] Start: Starting container
+[10070 ms] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/projects/mine/PL-php/.worktrees/devcontainer,target=/workspaces/devcontainer --mount source=plphp-php-build-cache,target=/opt/php-build,type=volume --mount source=plphp-postgres-data,target=/var/lib/postgresql/data,type=volume --mount type=volume,src=vscode,dst=/vscode -l devcontainer.local_folder=/projects/mine/PL-php/.worktrees/devcontainer -l devcontainer.config_file=/projects/mine/PL-php/.worktrees/devcontainer/.devcontainer/devcontainer.json -e POSTGRES_VERSION=9.6 -e PHP_VERSION=5.6.40 --entrypoint /bin/sh vsc-devcontainer-bce6c318cd5f4f4fa4904cc22a3705351bd44f628b005e8795b12cd98efacacd -c echo Container started
+Container started
